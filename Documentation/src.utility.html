@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module src.utility</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="src.html"><font color="#ffffff">src</font></a>.utility</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cprojects%5Crecommander-system%5Csrc%5Cutility.py">d:\projects\recommander-system\src\utility.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="heapq.html">heapq</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-final_results"><strong>final_results</strong></a>(actual, predicted)</dt><dd><tt>Finds&nbsp;rmse,&nbsp;precision&nbsp;of&nbsp;top&nbsp;k,&nbsp;and&nbsp;spearman&nbsp;correlation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+actual&nbsp;:&nbsp;numpy&nbsp;array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Actual&nbsp;ratings&nbsp;of&nbsp;the&nbsp;user<br>
+predicted&nbsp;:&nbsp;numpy&nbsp;array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Predicted&nbsp;ratings&nbsp;by&nbsp;the&nbsp;recommender&nbsp;system<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;rmse,&nbsp;precision&nbsp;of&nbsp;top&nbsp;k&nbsp;and&nbsp;spearman&nbsp;correlation</tt></dd></dl>
+ <dl><dt><a name="-find_filter"><strong>find_filter</strong></a>(d)</dt><dd><tt>Finds&nbsp;number&nbsp;of&nbsp;singular&nbsp;values&nbsp;for&nbsp;which&nbsp;90%&nbsp;energy&nbsp;can&nbsp;be&nbsp;retained<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+d&nbsp;:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;An&nbsp;diagonal&nbsp;matrix&nbsp;containing&nbsp;singular&nbsp;values<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;singular&nbsp;values&nbsp;for&nbsp;which&nbsp;90%&nbsp;energy&nbsp;has&nbsp;been&nbsp;retained</tt></dd></dl>
+ <dl><dt><a name="-svd_decomposition"><strong>svd_decomposition</strong></a>(arg1, arg2, arg3, matrix, r)</dt><dd><tt>Perform&nbsp;SVD&nbsp;decomposition&nbsp;of&nbsp;a&nbsp;given&nbsp;matrix<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+arg1&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;of&nbsp;the&nbsp;U&nbsp;matrix&nbsp;with&nbsp;which&nbsp;it&nbsp;should&nbsp;have&nbsp;been&nbsp;saved/loaded<br>
+arg2&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;of&nbsp;the&nbsp;Sigma&nbsp;matrix&nbsp;with&nbsp;which&nbsp;it&nbsp;should&nbsp;have&nbsp;been&nbsp;saved/loaded<br>
+arg3&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;of&nbsp;the&nbsp;V&nbsp;matrix&nbsp;with&nbsp;which&nbsp;it&nbsp;should&nbsp;have&nbsp;been&nbsp;saved/loaded<br>
+matrix:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;of&nbsp;which&nbsp;SVD&nbsp;decomposition&nbsp;has&nbsp;been&nbsp;performed<br>
+r:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;singular&nbsp;values&nbsp;to&nbsp;be&nbsp;retained&nbsp;during&nbsp;decomposition<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;U,&nbsp;Sigma&nbsp;and&nbsp;Vt&nbsp;matrix</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>COLLAB_K</strong> = 5<br>
+<strong>MOVIES</strong> = 3952<br>
+<strong>RANK</strong> = 3663<br>
+<strong>SVD_K</strong> = 1000<br>
+<strong>TEST_RATIO</strong> = 0.4<br>
+<strong>USERS</strong> = 6040</td></tr></table>
+</body></html>

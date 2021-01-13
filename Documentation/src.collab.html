@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module src.collab</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="src.html"><font color="#ffffff">src</font></a>.collab</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cprojects%5Crecommander-system%5Csrc%5Ccollab.py">d:\projects\recommander-system\src\collab.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="heapq.html">heapq</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-gen_sim_score"><strong>gen_sim_score</strong></a>(train_matrix)</dt><dd><tt>Generates&nbsp;similarity&nbsp;score&nbsp;of&nbsp;each&nbsp;movie&nbsp;pair<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+train_matrix&nbsp;:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Original&nbsp;training&nbsp;dataset&nbsp;matrix<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;containing&nbsp;similarity&nbsp;scores</tt></dd></dl>
+ <dl><dt><a name="-get_baseline_estimates"><strong>get_baseline_estimates</strong></a>(train_matrix)</dt><dd><tt>Calculates&nbsp;baseline&nbsp;estimates&nbsp;for&nbsp;each&nbsp;user&nbsp;and&nbsp;movie&nbsp;pair<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+train_matrix&nbsp;:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Training&nbsp;dataset&nbsp;matrix&nbsp;&nbsp;from&nbsp;which&nbsp;info&nbsp;(like&nbsp;various&nbsp;means)&nbsp;is&nbsp;needed&nbsp;for&nbsp;calculating&nbsp;baseline&nbsp;estimates<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;containing&nbsp;baseline&nbsp;estimates&nbsp;for&nbsp;each&nbsp;user&nbsp;and&nbsp;movie&nbsp;pair</tt></dd></dl>
+ <dl><dt><a name="-get_collab_results"><strong>get_collab_results</strong></a>(matrix)</dt><dd><tt>Apply&nbsp;appropriate&nbsp;operations&nbsp;on&nbsp;a&nbsp;given&nbsp;matrix&nbsp;to&nbsp;use&nbsp;Collaborative&nbsp;Filtering&nbsp;technique&nbsp;to&nbsp;predict&nbsp;ratings<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+matrix&nbsp;:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Original&nbsp;matrix&nbsp;on&nbsp;which&nbsp;Collaborative&nbsp;Filtering&nbsp;technique&nbsp;needs&nbsp;to&nbsp;be&nbsp;applied<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;all&nbsp;performance&nbsp;measures&nbsp;of&nbsp;the&nbsp;Collaborative&nbsp;Filtering&nbsp;with&nbsp;and&nbsp;without&nbsp;Global<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Baseline&nbsp;Approach</tt></dd></dl>
+ <dl><dt><a name="-get_prediction"><strong>get_prediction</strong></a>(train_matrix, x, y, sim_score, b)</dt><dd><tt>Perform&nbsp;operations&nbsp;to&nbsp;find&nbsp;rating&nbsp;prediction&nbsp;for&nbsp;a&nbsp;giver&nbsp;user&nbsp;and&nbsp;a&nbsp;movie<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+train_matrix&nbsp;:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Original&nbsp;training&nbsp;dataset&nbsp;matrix<br>
+x:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Movie&nbsp;for&nbsp;which&nbsp;prediction&nbsp;needs&nbsp;to&nbsp;be&nbsp;done<br>
+y:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;User&nbsp;for&nbsp;which&nbsp;prediction&nbsp;needs&nbsp;to&nbsp;be&nbsp;done<br>
+sim_score:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Similarity&nbsp;scores&nbsp;of&nbsp;each&nbsp;and&nbsp;every&nbsp;movie&nbsp;pairs<br>
+b:&nbsp;numpy&nbsp;matrix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;containing&nbsp;baseline&nbsp;estimates&nbsp;for&nbsp;each&nbsp;user&nbsp;and&nbsp;movie&nbsp;pair<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;tuple&nbsp;with&nbsp;prediction&nbsp;ratings&nbsp;with&nbsp;and&nbsp;without&nbsp;global&nbsp;baseline&nbsp;approach</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>COLLAB_K</strong> = 5<br>
+<strong>MOVIES</strong> = 3952<br>
+<strong>TEST_RATIO</strong> = 0.4<br>
+<strong>USERS</strong> = 6040</td></tr></table>
+</body></html>
